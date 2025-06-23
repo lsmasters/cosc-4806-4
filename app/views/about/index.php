@@ -47,7 +47,7 @@ color: #333;
 
 <div class="about-container">
 <div class="about-photo">
-<img src="me.jpg" alt="Photo of Larry Masters">
+<img src="/me.jpg" alt="Photo of Larry Masters">
 </div>
 <div class="about-text">
 <h1>Larry Masters</h1>
