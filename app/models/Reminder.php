@@ -35,6 +35,15 @@ class Reminder {
         */
     }
 
+    public function delete(){
+      $reminder_id = $_GET['id'];
+      $db = db_connect();
+      $sql = "DELETE FROM reminders WHERE id = :id";
+      $stmt = $db -> prepare($sql);
+      $stmt -> bindParam(':id', $reminder_id);
+      return $stmt -> execute();
+    }
+
     public function addReminder() {
       $id = $_SESSION['userID'];
       $subj =$_SESSION['subject'];
