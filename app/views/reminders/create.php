@@ -6,7 +6,7 @@
 
 <div class="row">
     <div class="col-sm-auto">
-        <form action="/Reminder/create" method="POST" >
+        <form action="/reminders/create" method="POST" >
         <fieldset>
             <br>
             <div class="form-group">

@@ -14,6 +14,7 @@ class Reminder {
     }
 
     public function create () {
+      $_SESSION['subject'] = $_POST['subject'];
       $db = db_connect();
       $sql = "INSERT INTO reminders (user_id,subject) VALUES (:userid, :subject)";
       $stmt = $db -> prepare($sql);
@@ -34,9 +35,9 @@ class Reminder {
         */
     }
 
-    public function addReminder($subj) {
+    public function addReminder() {
       $id = $_SESSION['userID'];
-      
+      $subj =$_SESSION['subject'];
       $db = db_connect();
       $sql = "INSERT INTO reminders (user_id, subject) VALUES (:userid, :subject)";     
       $stmt = $db -> prepare($sql);
