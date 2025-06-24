@@ -1,4 +1,5 @@
 <?php require_once 'app/views/templates/header.php' ?>
+
 <div class="container">
     <div class="page-header" id="banner">
         <div class="row">
@@ -9,10 +10,12 @@
             </div>
         </div>
     </div>
-    <?php
+</div>
+
+<?php
         echo "<pre>";
         print_r($data);
         echo "</pre>";
-    ?>
+?>
 
-    <?php require_once 'app/views/templates/footer.php' ?>
+<?php require_once 'app/views/templates/footer.php' ?>

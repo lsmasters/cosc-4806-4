@@ -32,6 +32,7 @@ class User {
 
      return $stmt -> execute();
    }
+    
   public function log($username, $success){
     $file = 'logins.log';
     $time = date("Y-m-d H:i:s");

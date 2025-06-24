@@ -33,6 +33,16 @@ class Reminder {
       return $rows;
         */
     }
+
+    public function addReminder($id,$subj) {
+      $db = db_connect();
+      $sql = "INSERT INTO reminders (user_id, subject) VALUES (:userid, :subject)";     
+      $stmt = $db -> prepare($sql);
+      $stmt -> bindParam(':userid', $id);
+      $stmt -> bindParam(':subject', $subj);
+
+      return $stmt -> execute(); 
+    }
 }
 
     

@@ -10,9 +10,18 @@ class Reminders extends Controller {
 
    public function create() {
       $reminder = $this->model('Reminder');
-      $this->view('reminders/create');  
-    }  
-
+      $this->view('reminders/create'); 
+      //if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $_SESSION['subject'] = $_POST['subject'];
+      //$id = $_SESSION['userID'];
+      //$subj = $_SESSION['subject'];
+      $reminder->addReminder($_SESSION['userID'],$_SESSION['subject']);
+      
+      header('Location: /reminders/index');
+      die;  
+  }  
+      
+ 
 }
 
 ?>

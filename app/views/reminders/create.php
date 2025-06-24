@@ -6,12 +6,12 @@
 
 <div class="row">
     <div class="col-sm-auto">
-        <form action="/Reminder/create" method="post" >
+        <form action="/Reminder/addReminder" method="post" >
         <fieldset>
             <br>
             <div class="form-group">
-                <label for="username">Enter reminder here</label>
-                <input required type="text" class="form-control" name="new_reminder" autofocus>
+                <label for="newsubject">Enter reminder here</label>
+                <input required type="text" class="form-control" name="subject" autofocus>
             </div>
             <br>
             
