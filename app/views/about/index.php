@@ -1,3 +1,5 @@
+<?php require_once 'app/views/templates/header.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +49,7 @@ color: #333;
 
 <div class="about-container">
 <div class="about-photo">
-<img src="/me.jpg" alt="Photo of Larry Masters">
+<img src="app/views/about/me.jpg" alt="Photo of Larry Masters">
 </div>
 <div class="about-text">
 <h1>Larry Masters</h1>
