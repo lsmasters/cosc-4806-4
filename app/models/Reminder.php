@@ -37,6 +37,8 @@ class Reminder {
     }
 
     public function delete($id){
+      echo $id;
+      die;
       $db = db_connect();
       $sql = "DELETE FROM reminders WHERE id = :id";
       $stmt = $db -> prepare($sql);
