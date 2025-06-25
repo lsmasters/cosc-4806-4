@@ -16,7 +16,6 @@ class Reminders extends Controller {
       //$id = $_SESSION['userID'];
       //$subj = $_SESSION['subject'];
       $reminder->addReminder();
-      $this->view('reminders'); 
       die;  
       }
     
@@ -28,15 +27,7 @@ class Reminders extends Controller {
           die;  
       }  
 
-      public function change($id,$subject) {
-          $reminder = $this->model('Reminder');
-          $this->view('reminders/change');
-          $_SESSION['subject'] = $subject;
-          $_SESSION['id'] = $id;
-          $reminder->update();
-          $this->view('reminders'); 
-          die;  
-      }  
+      
  
 }
 
