@@ -10,15 +10,15 @@ class Change extends Controller {
     public function update() {
         
         $subject = $_REQUEST['subject'];
-        // $id = $_SESSION['id';
+        $id = $_SESION['id'];
         echo $subject;  
-        //echo $id;
+        echo $id;
         die;
       
         $reminder = $this->model('Reminder');
-        $this->view('changeItem');
+      
         
-        $_SESSION['subject'] = $subject;
+        $reminder->subject = $subject;// set subject in model reminder
         $_SESSION['id'] = $id;
         $reminder->update();
         $this->view('reminders'); 

@@ -22,6 +22,7 @@
         </div>
         <div>
             <?= htmlspecialchars($item['subject']) ?>
+            <?= $_SESSION['id'] = $item['id'] ?>
         </div>
         <div>
             <a href="change" class="btn btn-primary btn-sm">EDIT</a>
