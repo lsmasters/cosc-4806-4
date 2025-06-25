@@ -24,23 +24,23 @@ class Reminder {
     }
     
   
-    public function update_reminder ($reminder_id) {
-      $db = db_connect();
-        //do code for update
-        /*
-      $statement = $db->prepare("select * from users;");
-      $statement->execute();
-      $rows = $statement->fetch(PDO::FETCH_ASSOC);
-      return $rows;
-        */
+    public function update ($reminder_id) {
+       $id = $_SESSION['id'];
+       $subj =$_SESSION['subject'];
+       $db = db_connect();
+       $sql = "UPDATE reminders SET user_id = :userid, subject = :subject WHERE id = :id";     
+        $stmt = $db -> prepare($sql);
+        $stmt -> bindParam(':userid', $id);
+        $stmt -> bindParam(':subject', $subj);
+        $stmt -> bindParam(':id', $id);
+        return $stmt -> execute();
     }
 
-    public function delete(){
-      $reminder_id = $_GET['id'];
+    public function delete($id){
       $db = db_connect();
       $sql = "DELETE FROM reminders WHERE id = :id";
       $stmt = $db -> prepare($sql);
-      $stmt -> bindParam(':id', $reminder_id);
+      $stmt -> bindParam(':id', $id, PDO::PARAM_INT);
       return $stmt -> execute();
     }
 

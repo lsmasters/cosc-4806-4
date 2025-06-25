@@ -18,8 +18,25 @@ class Reminders extends Controller {
       $reminder->addReminder();
       $this->view('reminders'); 
       die;  
-  }  
-      
+      }
+    
+      public function deleteItem($id) {
+          $reminder = $this->model('Reminder');
+          $this->view('reminders/index'); 
+          $reminder->delete($id);
+          $this->view('reminders'); 
+          die;  
+      }  
+
+      public function change($id,$subject) {
+          $reminder = $this->model('Reminder');
+          $this->view('reminders/change');
+          $_SESSION['subject'] = $subject;
+          $_SESSION['id'] = $id;
+          $reminder->update();
+          $this->view('reminders'); 
+          die;  
+      }  
  
 }
 
