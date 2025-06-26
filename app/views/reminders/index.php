@@ -19,7 +19,7 @@
         
     <div class="d-flex justify-content-between align-items-center border p-2 mb-2 rounded">
         <div>
-            <?=   $id =$item['id'] ?>
+            <?=   $_SESSION['id'] =$item['id'] ?>
         </div>
            
         <div>
@@ -28,6 +28,7 @@
         </div>
         <div>
             <a href="change" class="btn btn-primary btn-sm">EDIT</a>
+
             <a href="/reminders/deleteItem/<?= $item['id'] ?>" class="btn btn-danger btn-sm">DELETE</a>
         </div>
     </div>

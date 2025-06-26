@@ -14,6 +14,7 @@ class Change extends Controller {
         echo "Controller change/update<br>";
         echo  'SUBJECT:   ' . $subject . '<br>';   
         echo  'USERID:    ' . $_SESSION['userID'] . '<br>';
+        echo  'itemID:    ' . $_SESSION['id'] . '<br>';
         die;
       
         $reminder = $this->model('Reminder');
