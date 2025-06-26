@@ -24,13 +24,15 @@ class Reminder {
     }
     
   
-    public function update ($reminder_id) {
+    public function update () {
+       $uid = $_SESSION['userID']; 
+       $subject = $_SESSION['subject'];
        $id = $_SESSION['id'];
-       //$subj =$_SESSION['subject'];
+
        $db = db_connect();
        $sql = "UPDATE reminders SET user_id = :userid, subject = :subject WHERE id = :id";     
         $stmt = $db -> prepare($sql);
-        $stmt -> bindParam(':userid', $id);
+        $stmt -> bindParam(':userid', $uid);
         $stmt -> bindParam(':subject', $subject);
         $stmt -> bindParam(':id', $id);
         return $stmt -> execute();
