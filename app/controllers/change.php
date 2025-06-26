@@ -12,9 +12,10 @@ class Change extends Controller {
         $_SESSION['subject'] = $_REQUEST['subject'];
         
         $reminder = $this->model('Reminder');
-      
         $reminder->update();
-        header('Location: /reminders');
+
+        this->view('/reminders/index');
+        //header('Location: /reminders');
         echo 'Reminder updated successfully!';
         die;  
     }  

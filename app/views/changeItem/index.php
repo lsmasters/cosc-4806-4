@@ -11,10 +11,6 @@
         <fieldset>
             <br>
             <div class="form-group">
-                <label>Old Reminder:</label>
-                <p class="text-muted"><?= htmlspecialchars($reminder['subject']) ?></p>
-            </div>
-            <div class="form-group">
                 <label for="subject">Enter REVISED reminder here</label>
                 <input required type="text" class="form-control" name="subject"
                    placeholder="<?= htmlspecialchars($_SESSION['subject']) ?>" autofocus>
