@@ -10,9 +10,10 @@ class Change extends Controller {
     public function update() {
         
         $subject = $_REQUEST['subject'];
-        $id = $_SESION['id'];
-        echo $subject;  
-        echo $id;
+        
+        echo "Controller change/update<br>";
+        echo  'SUBJECT:   ' . $subject . '<br>';   
+        echo  'USERID:    ' . $_SESSION['userID'] . '<br>';
         die;
       
         $reminder = $this->model('Reminder');
