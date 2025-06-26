@@ -14,7 +14,8 @@ class Change extends Controller {
         $reminder = $this->model('Reminder');
       
         $reminder->update();
-        $this->view('reminders'); 
+        header('Location: /reminders');
+        echo 'Reminder updated successfully!';
         die;  
     }  
 }
