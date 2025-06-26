@@ -3,6 +3,7 @@
 class Change extends Controller {
 
     public function index() {
+      $_SESSION['id'] = $_POST['id'];
       $this->view('/changeItem/index');
       die;
     }

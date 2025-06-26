@@ -19,7 +19,7 @@
         
     <div class="d-flex justify-content-between align-items-center border p-2 mb-2 rounded">
         <div>
-            <?=   $_SESSION['id'] =$item['id'] ?>
+            <?=   $item['id'] ?>
         </div>
            
         <div>
@@ -27,7 +27,10 @@
             
         </div>
         <div>
-            <a href="change" class="btn btn-primary btn-sm">EDIT</a>
+            <form action="/change" method="POST" style="display:inline;">
+                <input type="hidden" name="id" value="<?= $item['id'] ?>">
+                <button type="submit" class="btn btn-primary btn-sm">EDIT</button>
+            </form>
 
             <a href="/reminders/deleteItem/<?= $item['id'] ?>" class="btn btn-danger btn-sm">DELETE</a>
         </div>
