@@ -54,7 +54,6 @@ class Reminder {
       $stmt = $db -> prepare($sql);
       $stmt -> bindParam(':userid', $id);
       $stmt -> bindParam(':subject', $subj);
-
       return $stmt -> execute(); 
     }
 }
