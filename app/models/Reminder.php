@@ -37,6 +37,7 @@ class Reminder {
     }
 
     public function delete($id){
+      echo "delete function of model";
       echo $id;
       die;
       $db = db_connect();

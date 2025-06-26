@@ -21,10 +21,14 @@ class Reminders extends Controller {
     
       public function deleteItem($id) {
           $reminder = $this->model('Reminder');
-          $this->view('reminders/index'); 
+          $this->view('reminders/index');
+        
+          echo 'controller deleteItem';
+          echo 'id = ' . $id ;
+          die;
           $reminder->delete($id);
-          $this->view('reminders'); 
-          die;  
+          $this->view('reminders/index');
+          die; 
       }  
 
       

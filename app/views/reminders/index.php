@@ -28,7 +28,7 @@
         </div>
         <div>
             <a href="change" class="btn btn-primary btn-sm">EDIT</a>
-            <a href="delete/$item['id']" class="btn btn-danger btn-sm">DELETE</a>
+            <a href="/reminders/deleteItem/<?= $item['id'] ?>" class="btn btn-danger btn-sm">DELETE</a>
         </div>
     </div>
     <?php endif; ?>
